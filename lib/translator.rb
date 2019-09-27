@@ -3,8 +3,13 @@
 def load_library(file_path)
   require 'yaml'
   thing = YAML.load_file(file_path)
-  hash = {:get_meaning=>{:japanese_emoticon=>thing['angel'][1]}, :get_emoticon=>{}}
-  print thing
+
+  hash = {:get_meaning=>{}, :get_emoticon=>{}}
+  thing.each_with_object([]) { |(definition,emoticon),array| array = emoticon.to_s
+      hash[:get_meaning][emoticon[1]] = "Hi"
+    }
+
+  print hash
   hash
 end
 
