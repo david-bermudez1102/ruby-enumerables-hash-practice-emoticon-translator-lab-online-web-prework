@@ -5,7 +5,7 @@ def load_library(file_path)
   thing = YAML.load_file(file_path)
 
   hash = {:get_meaning=>{}, :get_emoticon=>{}}
-  thing.each_with_object([]) { |(definition,emoticon),array| array = emoticon.to_s
+  thing.each { |definition,emoticon|
       hash[:get_meaning][emoticon[1]] = definition
     }
 
