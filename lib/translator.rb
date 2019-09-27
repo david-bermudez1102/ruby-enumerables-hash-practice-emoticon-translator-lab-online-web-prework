@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(file_path,emoticon)
   get_emoticons = load_library(file_path)
-  get_emoticon[:get_emoticon][emoticon]
+  get_emoticons[:get_emoticon][emoticon]
 
 end
 
