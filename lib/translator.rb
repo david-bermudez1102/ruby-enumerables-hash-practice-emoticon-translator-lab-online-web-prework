@@ -7,6 +7,7 @@ def load_library(file_path)
   hash = {:get_meaning=>{}, :get_emoticon=>{}}
   thing.each { |definition,emoticon|
       hash[:get_meaning][emoticon[1]] = definition
+      hash[:get_meaning][emoticon[0]] = emoticon[1]
     }
 
   print hash
